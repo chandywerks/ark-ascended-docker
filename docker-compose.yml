@@ -1,0 +1,21 @@
+version: '3'
+services:
+  ark-server:
+    build:
+      context: .
+    image: ark-server
+    container_name: ark-server
+    environment:
+      - SESSION_NAME
+      - ADMIN_PASSWORD
+      - MAX_PLAYERS=20
+    ports:
+      - 27030:27030
+      - 7775:7775
+    volumes:
+      - "ark-data:/root/.steam/steam/steamapps/common/ARK Survival Ascended Dedicated Server"
+
+volumes:
+  ark-data:
+    driver: local
+    name: ark-data
