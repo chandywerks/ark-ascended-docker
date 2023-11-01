@@ -24,4 +24,4 @@ Settings in `.env`
 | `QUERY_PORT`     | `27015` | UDP port
 | `GAME_PORT`      | `7777`  | UDP port
 | `MODS`     | | Comma-separated list of [CurseForge](https://www.curseforge.com/ark-survival-ascended) mod IDs to install (e.g. `928501,928728`)
-| `CMD_ARGS` | | Additional [command line arguments](https://ark.fandom.com/wiki/Server_configuration#Command_line_arguments) (e.g. `"--ForceAllowCaveFlyers -NotifyAdminCommandsInChat"`)
+| `CMD_ARGS` | | Additional [command line arguments](https://ark.fandom.com/wiki/Server_configuration#Command_line_arguments) (e.g. `"-ForceAllowCaveFlyers -NotifyAdminCommandsInChat"`)
