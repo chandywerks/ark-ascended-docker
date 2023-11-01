@@ -1,6 +1,7 @@
 version: '3'
 services:
   ark-server:
+    restart: unless-stopped
     build:
       context: .
     image: ark-server
@@ -14,6 +15,7 @@ services:
       - 7775:7775/udp
     volumes:
       - "ark-data:/root/.steam/steam/steamapps/common/ARK Survival Ascended Dedicated Server"
+      - ./ark-server-data:/root/.steam/steam/steamapps/common/ARK Survival Ascended Dedicated Server/ShooterGame"
 
 volumes:
   ark-data:
