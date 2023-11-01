@@ -6,4 +6,6 @@ Ark server in a docker container using GloriousEggroll's custom [proton build](h
 2) Copy `.env.example` to `.env` and configure
 3) Run `docker compose up --build`
 
-*Forward ports `27030` and `7775` to your docker host machine*
+*Forward ports `27015` and `7777` to your docker host machine*
+
+Your server files will be avilable under the docker volume directory `/var/lib/docker/volumes/ark-data/_data/ShooterGame/`

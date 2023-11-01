@@ -10,12 +10,13 @@ services:
       - SESSION_NAME
       - ADMIN_PASSWORD
       - MAX_PLAYERS=20
+      - QUERY_PORT=${QUERY_PORT:-27015}
+      - GAME_PORT=${GAME_PORT:-7777}
     ports:
-      - 27030:27030/udp
-      - 7775:7775/udp
+      - "${QUERY_PORT:-27015}:${QUERY_PORT:-27015}/udp"
+      - "${GAME_PORT:-7777}:${GAME_PORT:-7777}/udp"
     volumes:
       - "ark-data:/root/.steam/steam/steamapps/common/ARK Survival Ascended Dedicated Server"
-      - ./ark-server-data:/root/.steam/steam/steamapps/common/ARK Survival Ascended Dedicated Server/ShooterGame"
 
 volumes:
   ark-data:
