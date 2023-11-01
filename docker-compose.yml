@@ -12,6 +12,8 @@ services:
       - MAX_PLAYERS=20
       - QUERY_PORT=${QUERY_PORT:-27015}
       - GAME_PORT=${GAME_PORT:-7777}
+      - MODS
+      - CMD_ARGS
     ports:
       - "${QUERY_PORT:-27015}:${QUERY_PORT:-27015}/udp"
       - "${GAME_PORT:-7777}:${GAME_PORT:-7777}/udp"
