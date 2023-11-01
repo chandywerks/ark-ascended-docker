@@ -15,5 +15,10 @@ if [ -n "$MODS" ]; then
   SERVER_CMD="$SERVER_CMD -automanagedmods -mods=$MODS"
 fi
 
+# Additional command line arguments
+if [ -n "$CMD_ARGS" ]; then
+  SERVER_CMD="$SERVER_CMD $CMD_ARGS"
+fi
+
 eval $SERVER_CMD
 exit $?
