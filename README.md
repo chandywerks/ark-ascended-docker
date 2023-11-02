@@ -25,3 +25,22 @@ Settings in `.env`
 | `GAME_PORT`      | `7777`  | UDP port
 | `MODS`     | | Comma-separated list of [CurseForge](https://www.curseforge.com/ark-survival-ascended) mod IDs to install (e.g. `928501,928728`)
 | `CMD_ARGS` | | Additional [command line arguments](https://ark.fandom.com/wiki/Server_configuration#Command_line_arguments) (e.g. `"-ForceAllowCaveFlyers -NotifyAdminCommandsInChat"`)
+
+## Docker
+
+The docker image builds off the offical `steamcmd/steamcmd:latest` base image
+
+Running `docker compose build` builds the image locally and tags it as `ark-server`
+
+Alternatively you can use a [pre-built image](https://hub.docker.com/r/chandywerks/ark-server/tags) on docker hub `chandywerks/ark-server:latest`
+
+```yml
+version: '3'
+services:
+  ark-server:
+    restart: unless-stopped
+    image: chandywerks/ark-server:latest
+    container_name: ark-server
+    environment:
+       ...
+```
