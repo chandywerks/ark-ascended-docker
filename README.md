@@ -32,7 +32,7 @@ The docker image builds off the offical `steamcmd/steamcmd:latest` base image
 
 Running `docker compose build` builds the image locally and tags it as `ark-server`
 
-Alternatively you can use a [pre-built image](https://hub.docker.com/r/chandywerks/ark-server/tags) on docker hub `chandywerks/ark-server:latest`
+Alternatively you can use a [pre-built image](https://hub.docker.com/r/chandywerks/ark-server) on docker hub `chandywerks/ark-server:latest`
 
 ```yml
 version: '3'

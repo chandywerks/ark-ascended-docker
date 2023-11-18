@@ -22,7 +22,7 @@ eval $SERVER_CMD > /dev/null 2>&1 &
 SERVER_PID=$!
 
 # Capture logs
-tail -f "${ARK_PATH}/Saved/Logs/ShooterGame.log" &
+tail -f --retry "${ARK_PATH}/Saved/Logs/ShooterGame.log" &
 
 # Monitor server process
 wait $SERVER_PID
